@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Home made and hand woven bag",
+      "description": "Your just like the GET output. Id values are not mutable put. Id values are not mutable",
+      "category" : "luxury",
+      "price": 87,
+      "url": "https://images.pexels.com/photos/2557039/pexels-photo-2557039.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 2,
+      "name": "Well tailored designer bag with purse",
+      "description": "Your just like the GET output. Id values are not mutable our just like the GET output. Id values are not mutable",
+      "category" : "sports",
+      "price": 120,
+      "url": "https://images.pexels.com/photos/842959/pexels-photo-842959.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 3,
+      "name": "Quality and original leather bag",
+      "description": "Your just like the GET output. Id values are not mutable",
+      "category" : "casual",
+      "price": 125,
+      "url": "https://images.pexels.com/photos/45981/pexels-photo-45981.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 4,
+      "name": "Quality and original leather bag",
+      "description": "Your just like the GET output. Id values are not mutable ues are not mut",
+      "category" : "luxury",
+      "price": 257,
+      "url": "https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "name": "new item",
+      "description": "body JSON should be object enclosed, just like the GET output. (fo e the GET output",
+      "category" : "sports",
+      "price": "500",
+      "url": "https://images.pexels.com/photos/634538/pexels-photo-634538.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 5
+    },
+    {
+      "name": "an additional product",
+      "description": "an additional productan additional productan additional product  additional productan additional productan additio",
+      "category" : "sports",
+      "price": "874",
+      "url": "https://images.pexels.com/photos/2977304/pexels-photo-2977304.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 6
+    },
+    {
+      "name": "A new bag",
+      "description": "recently added",
+      "category" : "sports",
+      "price": "784",
+      "url": "https://images.pexels.com/photos/2393813/pexels-photo-2393813.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
