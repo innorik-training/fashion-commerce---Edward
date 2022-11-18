@@ -5,6 +5,8 @@ export interface itemsInterface{
     name:string,
     description : string,
     category ?: string,
+    material : string,
+    type : string,
     price : number,
     url:string
 }

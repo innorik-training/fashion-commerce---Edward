@@ -9,13 +9,10 @@ import { itemsInterface } from "./interfaces";
 import { useMediaQuery } from 'react-responsive'
 import {MdFilterList } from "react-icons/md";
 import MenuL from "../components/menu";
-import { Link, useNavigate } from "react-router-dom";
+import { createSearchParams, Link, useNavigate, useSearchParams } from "react-router-dom";
 
 const Navbar = () => {
     // screens
-    const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1224px)'})
-    const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-    const isTablet = useMediaQuery({ query: '(max-width: 1024px)' })
     const isMobile = useMediaQuery({ query: '(max-width: 900px)' })
 
     // navigate
@@ -29,7 +26,7 @@ const Navbar = () => {
         setcart(false);
     }
 
-    // get data
+    // get data from server
     useEffect(()=>{
         const fetchdata = async()=>{
             setitems(await fetchitems());
@@ -37,7 +34,7 @@ const Navbar = () => {
         fetchdata();
     },[])
 
-    //from redux
+    //from redux[number of items on cart]
     const num_of_items = useSelector((state:RootState)=>state.counter.value);
 
     // toggle cart
@@ -46,6 +43,9 @@ const Navbar = () => {
     //menu handler
     const [menu,setmenu] = useState<boolean>(false);
 
+    // search params
+    const[searchParams,setSearchParams] = useSearchParams();
+
     // search
     const [criteria,setcriteria] = useState<string>('');
     const [filtered,setfiltered] = useState<itemsInterface[]>([]);
@@ -53,7 +53,6 @@ const Navbar = () => {
     const togglesearch =()=>{
         setsearchsection(false);
     }
-
 
     const handlefilter = (criteria:string) =>{
         setmenu(false);
@@ -69,9 +68,16 @@ const Navbar = () => {
         }
     }
 
+    
     const handleSearch = () =>{
         if (criteria !== '') {
-            navigate(`/search/${criteria}`);
+            // setSearchParams({product : criteria})
+            navigate({
+                pathname : '/allbags',
+                search : createSearchParams({
+                    find : criteria,
+                }).toString(),
+            });
         }
         else{
             navigate('/')
@@ -79,7 +85,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="b bg-white w-full border-b-2 shadow-gray-300">
+        <nav className="b bg-white w-full border-b-2 shadow-gray-300 z-100">
             {/* menu list component */}
             {menu && <MenuL/>}
 
@@ -103,8 +109,8 @@ const Navbar = () => {
                     {/*text section*/}
                     <section className="flex flex-row">
                         <Link to = {'/'}  className={"px-4 font-bold text-gray-400" + (window.location.pathname === '/' ? ' t text-gray-800' : ' px-4 font-bold text-gray-400')}>HOME.</Link>
-                        <Link to = {'/about'} className={"px-4 font-bold text-gray-400 " + (window.location.pathname === '/about' ? ' text-gray-800' : 'px-4 font-bold text-gray-400')}>ABOUT.</Link>
-                        <Link to = {'/categories'} className={"px-4 font-bold text-gray-400 " + (window.location.pathname === '/categories' ? ' text-gray-800' : 'px-4 font-bold text-gray-400')}>CATEGORIES.</Link>
+                        <Link to = {'/about'}  className={"px-4 font-bold text-gray-400" + (window.location.pathname === '/about' ? ' t text-gray-800' : ' px-4 font-bold text-gray-400')}>ABOUT.</Link>
+                        <Link to = {`/allproducts/all`} className={"px-4 font-bold text-gray-400 " + (window.location.pathname === '/allproducts/all' ? ' text-gray-800' : 'px-4 font-bold text-gray-400')}>PRODUCTS.</Link>
                         <Link to = {'/blog'} className={"px-4 font-bold text-gray-400 " + window.location.pathname === '/blog' ? ' text-gray-800' : 'px-4 font-bold text-gray-400'}>BLOG.</Link>
                     </section>
 
