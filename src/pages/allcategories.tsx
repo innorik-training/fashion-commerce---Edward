@@ -17,23 +17,23 @@ const Allcategories = () => {
     const [all_categories_data,set_all_categories_data] = useState<categories[]>([
         {
             id: 0,
-            name: 'luxury',
+            name: "Men's colection",
             description : 'Explore a collection of luxury bags on the store',
-            link : `/categories/`,
+            link : `men`,
             svg : svg
         },
         {
             id: 1,
-            name: 'casual',
+            name: "Women's colection",
             description : 'Explore a collection of casual bags on the store',
-            link : 'sports',
+            link : 'women',
             svg : svg2
         },
         {
             id: 2,
-            name: 'sports',
+            name: "Kid's colection",
             description : 'Explore a collection of sports bags on the store',
-            link : 'sports',
+            link : 'kids',
             svg : svg3
         },
     ]);
@@ -46,7 +46,7 @@ const Allcategories = () => {
             {/* CONTENT */}
             <div className="w-10/12 bg-white pb-14 overflow-y-hidden md:w-9/12 m-auto pt-40">
                 <div className="flex flex-start">
-                    <p className="text-4xl font-sans font-semibold italic text-slate-700">ALL Categories</p>
+                    <p className="text-4xl font-sans font-semibold italic text-slate-700">Shop By Categories</p>
                 </div>
                 
 
@@ -62,7 +62,7 @@ const Allcategories = () => {
                                     <p className="text-2xl text-slate-800 font-semibold">{category.name}</p>
                                     <p className="text-lg text-gray-600  pt-5 ">{category.description}</p>
                                     <div className="btns pt-7">
-                                        <Link to = {`/categories/${category.name}`} className="px-6 py-2 border-solid border-2 border-gray-400 text-xl font-bold italic rounded text-gray-700 hover:border-gray-300">Explore</Link>
+                                        <Link to = {`/categories/${category.link}`} className="px-6 py-2 border-solid border-2 border-gray-400 text-xl font-bold italic rounded text-gray-700 hover:border-gray-300">Explore</Link>
                                     </div>
                                 </div>
                             </div>
