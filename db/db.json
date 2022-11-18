@@ -2,59 +2,123 @@
   "items": [
     {
       "id": 1,
-      "name": "Home made and hand woven bag",
-      "description": "Your just like the GET output. Id values are not mutable put. Id values are not mutable",
-      "category" : "luxury",
-      "price": 87,
-      "url": "https://images.pexels.com/photos/2557039/pexels-photo-2557039.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "name": "steampunk retro messenger bags",
+      "description": "2021 new bag women steampunk retro messenger bags for women backpack cellphone bag",
+      "category" : "women",
+      "material" : "leather",
+      "type" : "luxury",
+      "price": 103,
+      "url": "https://s.alicdn.com/@sc04/kf/H716f9dbff4024a3398981ecc518e8f847.jpg_960x960.jpg"
     },
     {
       "id": 2,
-      "name": "Well tailored designer bag with purse",
-      "description": "Your just like the GET output. Id values are not mutable our just like the GET output. Id values are not mutable",
-      "category" : "sports",
-      "price": 120,
-      "url": "https://images.pexels.com/photos/842959/pexels-photo-842959.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "name": "Shoulder Bag Chain Crossbody",
+      "description": "2022 Trending Diamond Sewing Thread Shoulder Bag Chain Crossbody Bags Large Capacity PU Tote Handbags For Ladies",
+      "category" : "women",
+      "material" : "canvas",
+      "type" : "luxury",
+      "price": 150,
+      "url": "https://s.alicdn.com/@sc04/kf/Hfebb77ae0d574ddc9103895878b21337q.jpg_960x960.jpg"
     },
     {
       "id": 3,
-      "name": "Quality and original leather bag",
-      "description": "Your just like the GET output. Id values are not mutable",
-      "category" : "casual",
-      "price": 125,
-      "url": "https://images.pexels.com/photos/45981/pexels-photo-45981.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "name": "Carrier Carrying Backpack Bag",
+      "description": "Free Shipping Wholesale Breathable Transparent Pet Cat Dog Travel Carrier Carrying Backpack Bag",
+      "category" : "kids",
+      "material" : "nylon",
+      "type" : "sports",
+      "price": 85,
+      "url": "https://s.alicdn.com/@sc04/kf/H7b4246a0fb91446b9ee2ac42c6e33cd71.jpg_960x960.jpg"
     },
     {
       "id": 4,
-      "name": "Quality and original leather bag",
-      "description": "Your just like the GET output. Id values are not mutable ues are not mut",
-      "category" : "luxury",
+      "name": "Quality and original Canvas made travelling bag",
+      "description": "Quality and original Canvas made travelling bag suitable for all your occassions",
+      "category" : "men",
+      "material" : "canvas",
+      "type" : "casual",
       "price": 257,
-      "url": "https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=600"
+      "url": "https://images.pexels.com/photos/45981/pexels-photo-45981.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       "name": "new item",
-      "description": "body JSON should be object enclosed, just like the GET output. (fo e the GET output",
-      "category" : "sports",
-      "price": "500",
-      "url": "https://images.pexels.com/photos/634538/pexels-photo-634538.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Custom Waterproof Anti Theft Designer Chest Bag USB Crossbody Sling Bags For Men Single Shoulder Crossbody Bag",
+      "category" : "men",
+      "price": "112",
+      "material" : "nylon",
+      "type" : "sports",
+      "url": "https://s.alicdn.com/@sc04/kf/Hc8cb060ec46a473f8697b12bfa3e5b93T.jpg_960x960.jpg",
       "id": 5
     },
     {
       "name": "an additional product",
       "description": "an additional productan additional productan additional product  additional productan additional productan additio",
-      "category" : "sports",
+      "category" : "kids",
       "price": "874",
+      "material" : "leather",
+      "type" : "sports",
       "url": "https://images.pexels.com/photos/2977304/pexels-photo-2977304.jpeg?auto=compress&cs=tinysrgb&w=600",
       "id": 6
     },
     {
+      "id": 7,
+      "name": "Quality and original leather bag",
+      "description": "Your just like the GET output. Id values are not mutable ues are not mut",
+      "category" : "men",
+      "material" : "nylon",
+      "type" : "sports",
+      "price": 257,
+      "url": "https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
       "name": "A new bag",
       "description": "recently added",
-      "category" : "sports",
+      "category" : "kids",
       "price": "784",
+      "material" : "canvas",
+      "type" : "sports",
       "url": "https://images.pexels.com/photos/2393813/pexels-photo-2393813.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "id": 7
+      "id": 8
+    },
+    {
+      "name": "A new bag",
+      "description": "recently added",
+      "category" : "kids",
+      "price": "784",
+      "material" : "nylon",
+      "type" : "sports",
+      "url": "https://images.pexels.com/photos/45981/pexels-photo-45981.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 9
+    },
+    {
+      "name": "A new bag",
+      "description": "recently added",
+      "category" : "kids",
+      "price": "784",
+      "material" : "nylon",
+      "type" : "sports",
+      "url": "https://images.pexels.com/photos/634538/pexels-photo-634538.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 10
+    },
+    {
+      "name": "A new bag",
+      "description": "recently added",
+      "category" : "men",
+      "price": "784",
+      "material" : "canvas",
+      "type" : "sports",
+      "url": "https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 11
+    },
+    {
+      "name": "A new bag",
+      "description": "recently added",
+      "category" : "kids",
+      "price": "784",
+      "material" : "leather",
+      "type" : "sports",
+      "url": "https://images.pexels.com/photos/45981/pexels-photo-45981.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 12
     }
   ],
   "comments": [
