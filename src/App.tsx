@@ -8,6 +8,7 @@ import SearchResults from "./components/search";
 import Notfound from "./pages/404";
 import About from "./pages/about";
 import AddItem from "./pages/add";
+import Allbags from "./pages/allbags";
 import Allcategories from "./pages/allcategories";
 import Category from "./pages/category";
 import Home from './pages/home';
@@ -25,7 +26,10 @@ function App() {
           <Route path="/product/:id" element={<Product/>}/>
 
           {/* SEARCH RESULTS PAGE */}
-          <Route path="/search/:criteria" element={<SearchResults/>}/>
+          <Route path="/allbags" element={<SearchResults/>}/>
+
+          {/* ALL BAGS */}
+          <Route path="/allproducts/:category" element={<Allbags/>}/>
 
           {/* ADMIN PAGE */}
           <Route path="/add" element={<AddItem/>}/>
