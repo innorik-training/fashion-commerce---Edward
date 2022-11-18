@@ -8,9 +8,11 @@ import { useEffect, useState } from "react";
 import svg from '../Accessories/empty.svg';
 import { itemsInterface } from "../assets/interfaces";
 
-export interface funcinterface{
+interface funcinterface{
     cartstat : () => void;
 }
+
+
 const Cart = ({cartstat}:funcinterface) => {
     //from redux
     const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { itemsInterface } from "../assets/interfaces";
-import {useNavigate, useParams,Link} from 'react-router-dom'
+import {useNavigate, Link, useSearchParams} from 'react-router-dom'
 import { IoIosClose } from "react-icons/io";
 import svg from '../Accessories/noresults.svg';
 import Navbar from "../assets/navbar";
@@ -12,23 +12,24 @@ const SearchResults = () => {
 
     // filtered state
     const [filtered,setfiltered] = useState<itemsInterface[]>([]);
-    const[itemsdata, setitems] = useState<itemsInterface[]>([]);
 
-    // search criteria from param
-    const{criteria} = useParams();
+    //retrieving search data from search params
+    const [searchParams,setSearchParams] = useSearchParams();
+    const search_for = searchParams.get('find');
+    
 
     // get search data
-    useEffect(()=>{
+    useEffect(()=>{        
         const fetchdata = async() =>{
             // fetching all items
             const res = await axios.get('http://localhost:3001/items');
 
             //filter by search criteria from param
-            setfiltered(res.data.filter((filt:itemsInterface)=> filt.name.toLowerCase().includes(criteria!.toLowerCase())));
+            setfiltered(res.data.filter((filt:itemsInterface)=> filt.name.toLowerCase().includes(search_for!.toLowerCase())));
         }
         //invoke function
         fetchdata();
-    },[criteria])
+    },[search_for])
 
     return (
         <div className="h-screen">
@@ -40,7 +41,7 @@ const SearchResults = () => {
                 <div className="w-10/12 m-auto pt-7 h-f">
                     {/* top section */}
                     <div className="flex flex-row justify-between items-center">
-                        <p className="text-3xl font-mono italic font-bold">Results for <span className="t text-green-700">{criteria}</span></p>
+                        <p className="text-3xl font-mono italic font-bold">Results for <span className="t text-green-700">{search_for}</span></p>
 
                         <Link to={'/'} className="b bg-gray-100 rounded-full shadow-xl hover:cursor-pointer hover:bg-gray-200">
                             <IoIosClose className="c text-gray-700" color={"grey"} size={60}/>
@@ -51,6 +52,17 @@ const SearchResults = () => {
                     {filtered && filtered.length === 0  && <div className="flex flex-col md:flex-row justify-between h-full pt-8 md:pt-0">
                         <section className="w-full md:w-1/2 flex justify-start items-center pb-20 text-4xl font-semibold text-gray-600">
                             <p>Oops...no product matched that</p>
+                        </section>
+
+                        <section className="image w-full md:w-1/2">
+                            <img className="h-4/5" src= {svg} alt="image here" />
+                        </section>
+                    </div>}
+
+                    {/* no results */}
+                    {filtered && filtered.length === 0  && <div className="flex flex-col md:flex-row justify-between h-full pt-8 md:pt-0">
+                        <section className="w-full md:w-1/2 flex justify-start items-center pb-20 text-4xl font-semibold text-gray-600">
+                            <p>Oops...no product matched that filter</p>
                         </section>
 
                         <section className="image w-full md:w-1/2">
